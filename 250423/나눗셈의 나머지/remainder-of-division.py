@@ -7,7 +7,7 @@ r=[]
 total =0 
 
 
-while A >=1:
+while A >1:
     r.append(A%B)
     A= A//B
 
