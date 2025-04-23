@@ -10,4 +10,5 @@ if a[0]<250:
             print(round(a_sum/i,1))
             break
         elif a[len(a)-1]<250:
-            print(a_sum, round(a_sum/len(a),1))
+            print(a_sum,end=' ' )
+            print(round(a_sum/len(a),1))
