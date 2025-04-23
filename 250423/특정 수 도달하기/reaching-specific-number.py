@@ -7,5 +7,5 @@ if a[0]<250:
         if a_sum>=260:
             a_sum -=a[i]
             print(a_sum,end=' ')
-            print(a_sum/i)
+            print(round(a_sum/i,1))
             break
