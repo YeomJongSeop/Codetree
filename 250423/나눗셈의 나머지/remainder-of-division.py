@@ -13,6 +13,7 @@ while A >=1:
 
 
 
+
 for i in r:
     count[i]+=1
 
