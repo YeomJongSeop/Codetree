@@ -10,12 +10,11 @@ def ans(a,b):
         if i%3==0:
             count+=1
         else:
-            arr=list(str(i))
-            for elem in arr:
+            #arr=list(str(i))
+            for elem in str(i):
                 if elem in s:
                     count+=1
     
-
     return(count)
         
 
