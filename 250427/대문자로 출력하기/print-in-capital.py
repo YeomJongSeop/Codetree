@@ -3,7 +3,7 @@ ans=[]
 
 
 for i in range(len(arr)):
-    if arr[i] >='A' and arr[i]<='z':
+    if arr[i].isalpha():
         ans.append(arr[i].upper())
 
 
