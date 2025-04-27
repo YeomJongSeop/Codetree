@@ -6,7 +6,7 @@ count =0
 length=0
 
 for elem in arr:
-    if alp in elem:
+    if alp in elem[0]:
         length+=len(elem)
         count+=1
 
