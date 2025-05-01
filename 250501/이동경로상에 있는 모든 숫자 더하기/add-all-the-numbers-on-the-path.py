@@ -6,12 +6,14 @@ answer = [list(map(int, input().split())) for _ in range(N)]
 #격자니까 행렬 동 남 서 북 
 dxs=[0,1,0,-1]#row
 dys=[1,0,-1,0]#column
-s=0
+s=0 
+#s=[]
 
 # 북쪽
 dir_num=3
 x,y = int(N/2) , int(N/2)
-s+=answer[x][y]
+s+=answer[x][y] 
+#s.appened(answer[x][y])
 
 def in_range(x,y):
     return 0<=x and x<N and 0<=y and y<N
@@ -27,9 +29,11 @@ for a in cmd:
             continue
         x,y= x+dxs[dir_num],y+dys[dir_num]
         s+=answer[x][y]
+        #s.append(answer[x][y])
     continue
 
 print(s)
+#print(sum(s))
 
 
 
