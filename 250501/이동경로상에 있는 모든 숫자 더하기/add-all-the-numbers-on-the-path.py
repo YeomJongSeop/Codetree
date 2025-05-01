@@ -23,7 +23,7 @@ for a in cmd:
         dir_num=(dir_num-1 +4)%4
     elif a=='F':
         nx,ny= x+dxs[dir_num],y+dys[dir_num]
-        if not in_range(ny,ny):
+        if not in_range(nx,ny):
             continue
         x,y= x+dxs[dir_num],y+dys[dir_num]
         s+=answer[x][y]
