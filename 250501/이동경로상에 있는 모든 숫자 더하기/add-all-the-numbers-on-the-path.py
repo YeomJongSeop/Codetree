@@ -27,6 +27,7 @@ for a in cmd:
             continue
         x,y= x+dxs[dir_num],y+dys[dir_num]
         s.append(answer[x][y])
+    continue
 
 print(sum(s))
 
