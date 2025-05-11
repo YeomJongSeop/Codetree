@@ -1,22 +1,25 @@
-UNUSED = -1
-
 str1 = input()
 str2 = input()
 
 str1_len, str2_len = len(str1), len(str2)
 str1, str2 = '#' + str1, '#' + str2
 
-memo = [[UNUSED] * (str2_len + 1) for _ in range(str1_len + 1)]
+dp = [[0] * (str2_len + 1) for _ in range(str1_len + 1)]
 
-def find_max_len(i, j):
-    if i > str1_len or j > str2_len:
-        return 0
-    if memo[i][j] != UNUSED:
-        return memo[i][j]
-    if str1[i] == str2[j]:
-        memo[i][j] = find_max_len(i + 1, j + 1) + 1
-    else:
-        memo[i][j] = max(find_max_len(i + 1, j), find_max_len(i, j + 1))
-    return memo[i][j]
+def initialize():
+    dp[1][1] = int(str1[1] == str2[1])
+    for i in range(2, str1_len + 1):
+        dp[i][1] = 1 if str1[i] == str2[1] else dp[i - 1][1]
+    for j in range(2, str2_len + 1):
+        dp[1][j] = 1 if str1[1] == str2[j] else dp[1][j - 1]
 
-print(find_max_len(1, 1))
+initialize()
+
+for i in range(2, str1_len + 1):
+    for j in range(2, str2_len + 1):
+        if str1[i] == str2[j]:
+            dp[i][j] = dp[i - 1][j - 1] + 1
+        else:
+            dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+
+print(dp[str1_len][str2_len])
