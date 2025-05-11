@@ -1,28 +1,38 @@
 n, m = map(int, input().split())
 grid = [list(map(int, input().split())) for _ in range(n)]
 
-def is_happy(sequence, m):
-    count = 1
-    for i in range(1, len(sequence)):
-        if sequence[i] == sequence[i - 1]:
-            count += 1
+dx = [0, 1]  # 0: 행(→), 1: 열(↓)
+dy = [1, 0]
+
+def is_happy_line(x, y, dir):
+    cnt = 1
+    prev = grid[x][y]
+
+    max_cnt = 1  # 가장 긴 연속 구간
+    for _ in range(1, n):
+        x += dx[dir]
+        y += dy[dir]
+        if x >= n or y >= n:
+            break
+        if grid[x][y] == prev:
+            cnt += 1
         else:
-            count = 1
-        if count >= m:
-            return True
-    return False
+            cnt = 1
+            prev = grid[x][y]
+        max_cnt = max(max_cnt, cnt)
+
+    return max_cnt >= m  # 가장 긴 연속 길이가 M 이상이면 행복
 
 happy_count = 0
 
-# 행 검사
-for row in grid:
-    if is_happy(row, m):
+# 행
+for i in range(n):
+    if is_happy_line(i, 0, 0):
         happy_count += 1
 
-# 열 검사
+# 열
 for j in range(n):
-    col = [grid[i][j] for i in range(n)]
-    if is_happy(col, m):
+    if is_happy_line(0, j, 1):
         happy_count += 1
 
 print(happy_count)
