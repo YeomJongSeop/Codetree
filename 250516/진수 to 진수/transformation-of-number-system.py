@@ -14,12 +14,12 @@ n=t_num
 ans=[]
 
 while True:
-    if n<2:
+    if n<b:
         ans.append(n)
         break
 
-    ans.append(n%2)
-    n= n//2
+    ans.append(n%b)
+    n= n//b
 
 
 for elem in ans[::-1]:
