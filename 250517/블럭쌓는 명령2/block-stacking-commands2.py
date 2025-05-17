@@ -7,9 +7,9 @@ block=[0 for _ in range(n)]
 
 
 for elem in commands:
-    a,b=elem[0],elem[1]
-    block[a-1]+=1
-    block[b-1]+=1
+    a,b=elem[0]-1,elem[1]-1
+    block[a]+=1
+    block[b]+=1
 
 
 print(max(block))
