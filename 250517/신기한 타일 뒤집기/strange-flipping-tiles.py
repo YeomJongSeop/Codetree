@@ -3,10 +3,10 @@ commands = [tuple(input().split()) for _ in range(n)]
 
 
 # Please write your code here.
-white=[0 for _ in range(2000)] 
-black=[0 for _ in range(2000)]
+white=[0 for _ in range(20000)] 
+black=[0 for _ in range(20000)]
 
-idx=1000
+idx=10000
 
 
 for elem in commands:
