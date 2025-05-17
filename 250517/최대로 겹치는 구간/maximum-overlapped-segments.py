@@ -3,7 +3,7 @@ segments = [tuple(map(int, input().split())) for _ in range(n)]
 
 # Please write your code here.
 
-arr=[0 for _ in range(100)]
+arr=[0 for _ in range(200)]
 
 
 for elem in segments:
