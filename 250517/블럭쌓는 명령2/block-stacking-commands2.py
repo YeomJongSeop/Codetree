@@ -8,8 +8,8 @@ block=[0 for _ in range(n)]
 
 for elem in commands:
     a,b=elem[0]-1,elem[1]-1
-    block[a]+=1
-    block[b]+=1
+    for i in range(a,b+1):
+        block[i]+=1
 
 
 print(max(block))
