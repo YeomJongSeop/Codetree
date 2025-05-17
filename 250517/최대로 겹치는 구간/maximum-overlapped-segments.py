@@ -7,7 +7,7 @@ arr=[0 for _ in range(201)]
 
 
 for elem in segments:
-    a,b = elem[0]-1,elem[1]-1
+    a,b = elem[0]+100,elem[1]+100
     for i in range(a,b+1):
         arr[i]+=1
 
