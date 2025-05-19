@@ -6,7 +6,7 @@ B_move=[ tuple(input().split()) for _ in range(M) ]
 A_pos=[0 for _ in range(1000000)]
 B_pos=[0 for _ in range(1000000)]
 
-idx=50000
+idx=500000
 A_time=0
 
 for d,move in A_move:
@@ -23,7 +23,7 @@ for d,move in A_move:
     A_time+= int(move)
 
 
-idx=50000
+idx=500000
 B_time=0
 
 for d,move in B_move:
