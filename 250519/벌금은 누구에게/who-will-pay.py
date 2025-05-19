@@ -10,3 +10,5 @@ for i in range(len(arr)):
     if stu_cnt[arr[i]] ==K:
         print(arr[i])
         break
+    
+else: print(-1)
