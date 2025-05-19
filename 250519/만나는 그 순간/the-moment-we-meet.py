@@ -3,10 +3,10 @@ N,M = map(int,input().split())
 A_move=[ tuple(input().split()) for _ in range(N) ]
 B_move=[ tuple(input().split()) for _ in range(M) ]
 
-A_pos=[0 for _ in range(1000)]
-B_pos=[0 for _ in range(1000)]
+A_pos=[0 for _ in range(6000)]
+B_pos=[0 for _ in range(6000)]
 
-idx=500
+idx=3000
 time=0
 
 for d,move in A_move:
@@ -23,7 +23,7 @@ for d,move in A_move:
     time+= int(move)
 
 
-idx=500
+idx=3000
 time=0
 
 for d,move in B_move:
