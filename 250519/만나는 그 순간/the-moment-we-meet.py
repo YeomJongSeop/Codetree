@@ -7,40 +7,40 @@ A_pos=[0 for _ in range(100000)]
 B_pos=[0 for _ in range(100000)]
 
 idx=50000
-time=0
+A_time=0
 
 for d,move in A_move:
     if d == 'R':
         for t in range(1,int(move)+1):
             idx+=1
-            A_pos[time+t] = idx
+            A_pos[A_time+t] = idx
 
 
     else:
         for t in range(1,int(move)+1):
             idx-=1
-            A_pos[time+t] = idx
-    time+= int(move)
+            A_pos[A_time+t] = idx
+    A_time+= int(move)
 
 
 idx=50000
-time=0
+B_time=0
 
 for d,move in B_move:
     if d == 'R':
         for t in range(1,int(move)+1):
             idx+=1
-            B_pos[time+t] = idx
+            B_pos[B_time+t] = idx
 
 
     else:
         for t in range(1,int(move)+1):
             idx-=1
-            B_pos[time+t] = idx
-    time+= int(move)
+            B_pos[B_time+t] = idx
+    B_time+= int(move)
 
 
-for t in range(1,time+1):
+for t in range(1,A_time+1):
     if A_pos[t] == B_pos[t]:
         print(t)
         break
