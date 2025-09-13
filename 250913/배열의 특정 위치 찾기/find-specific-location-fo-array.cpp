@@ -11,16 +11,17 @@ int main() {
         if ((i+1)%2 ==0){
             r1+=arr[i];
         }
+        if ((i+1)%3 ==0){
+            r2+=arr[i];
+            cnt++;
+        }
 
     }
 
 
-    for(int i=2; i<10; i+=3){
-        r2+=arr[i];
-        cnt++;
-    }
 
-    double avg = r2/cnt;
+
+    double avg = (double)r2/cnt;
 
 
     cout << r1<<" ";
