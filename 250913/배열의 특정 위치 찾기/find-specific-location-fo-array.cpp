@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     // Please write your code here.
-    int arr[10],r1=0,r2=0;
+    int arr[10],r1=0,r2=0,cnt=0;
 
     for(int i=0; i<10; i++){
         cin>>arr[i];
@@ -17,9 +17,10 @@ int main() {
 
     for(int i=2; i<10; i+=3){
         r2+=arr[i];
+        cnt++;
     }
 
-    double avg = r2/3;
+    double avg = r2/cnt;
 
 
     cout << r1<<" ";
