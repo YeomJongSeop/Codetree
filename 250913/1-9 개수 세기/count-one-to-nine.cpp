@@ -15,7 +15,7 @@ int main() {
     }
     
     for(int i=1; i<=9; i++){
-        cout<< count[i] <<endl;
+        cout<< count[i] << "\n";
     }
     
     return 0;
