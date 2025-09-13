@@ -21,7 +21,9 @@ int main() {
 
 
 
-    double avg = round((double)r2)/cnt;
+    double avg = (double)r2/cnt;
+
+    avg= round(avg*10)/10.0;
 
 
     cout << r1<<" ";
