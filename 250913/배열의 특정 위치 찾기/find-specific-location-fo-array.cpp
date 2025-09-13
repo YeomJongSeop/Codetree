@@ -25,7 +25,11 @@ int main() {
 
 
     cout << r1<<" ";
-    cout <<fixed << setprecision(1) <<avg;
+    cout<<fixed;
+    cout.precision(1);
+
+    // cout <<fixed << setprecision(1) <<avg;
+    cout<<avg;
 
 
 
