@@ -12,13 +12,12 @@ int main() {
 
 
     for(int i=0;i<5;i++){
-        for(int j=2;j<4;j++){
-            if(str_arr[i][j]== letter ){
-                cout<<str_arr[i]<<endl;
-                cnt++;
-            }
+        if(str_arr[i][2]== letter ||str_arr[i][3]==letter ){
+            cout<<str_arr[i]<<endl;
+            cnt++;
         }
     }
+    
 
     cout<<cnt;
     return 0;
