@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     // Please write your code here.
-    string str[2];
+    string str[1];
     int idx=-1;
 
     for(int i=0; i<2;i++){
