@@ -1,5 +1,5 @@
 N,K,T=input().split()
-w_li=[input() for _ in range(int(N))]
+w_li=[input().strip() for _ in range(int(N))]
 
 ans=[]
 
