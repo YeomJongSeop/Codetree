@@ -5,6 +5,10 @@ ans=[]
 
 
 for i in range(len(w_li)):
+
+        # 단어 길이가 T보다 짧으면 패스
+    if len(w_li[i]) < len(T):
+        continue
     ok=True
     for j in range(len(T)):
         if w_li[i][j]!=T[j]:
