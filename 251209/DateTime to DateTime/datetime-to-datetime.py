@@ -4,12 +4,7 @@ hour=11
 minute=11
 ans=0
 
-if A< 11:
-    print(-1)
-elif A ==11 and B<11:
-    print(-1)
-
-elif A==11 and B==11 and C<11:
+if (A, B, C) < (11, 11, 11):
     print(-1)
 
 else:
