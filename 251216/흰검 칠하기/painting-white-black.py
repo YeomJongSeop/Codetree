@@ -1,7 +1,7 @@
 N = int(input())
 li = [list(input().split()) for _ in range(N)]
 
-offset = 5000
+offset = 500
 
 # 0: no 1: white 2:black 3: gray
 state = [0] * 10000
