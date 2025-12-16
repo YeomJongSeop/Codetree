@@ -1,5 +1,5 @@
-offset=50
-arr=[0]*101
+offset=100
+arr=[0]*1000
 N=int(input())
 li=[list(input().split()) for _ in range(N) ]
 
