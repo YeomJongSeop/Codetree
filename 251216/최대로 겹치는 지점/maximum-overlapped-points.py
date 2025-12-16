@@ -1,6 +1,6 @@
 N=int(input())
 li=[list(map(int,input().split())) for _ in range(N)]
-arr=[0]*100
+arr=[0]*101
 
 
 for x,y in li:
