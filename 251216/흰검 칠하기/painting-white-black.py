@@ -1,7 +1,7 @@
 N = int(input())
 li = [list(input().split()) for _ in range(N)]
 
-MAX_K = 10000
+MAX_K = 100000
 # 변수 선언 및 입력:
 
 # 0: no 1: white 2:black 3: gray
