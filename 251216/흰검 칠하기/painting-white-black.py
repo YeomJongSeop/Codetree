@@ -1,15 +1,16 @@
 N = int(input())
 li = [list(input().split()) for _ in range(N)]
 
-offset = 10000
+MAX_K = 100000
+# 변수 선언 및 입력:
 
 # 0: no 1: white 2:black 3: gray
-state = [0] * 100000
+state = [0] * (2*MAX_K+1)
 
-b_cnt = [0] * 100000
-w_cnt = [0] * 100000
+b_cnt = [0] * (2*MAX_K+1)
+w_cnt = [0] * (2*MAX_K+1)
 
-cur = offset
+cur = MAX_K
 
 for x, y in li:
     x=int(x)
