@@ -1,39 +1,38 @@
-MAX_K=1000
-arr=[[0]*(2*MAX_K+1) for _ in range(2*MAX_K+1) ]
-OFF=MAX_K
+MAX_K = 1000
+OFF = MAX_K
+N = 2 * MAX_K + 1
 
-a1,b1,c1,d1 = map(int, input().split())
-a2,b2,c2,d2 = map(int, input().split())
+arr = [[0] * N for _ in range(N)]
+
+a1, b1, c1, d1 = map(int, input().split())
+a2, b2, c2, d2 = map(int, input().split())
 
 # 1번: 칠하기
 for i in range(a1, c1):
     for j in range(b1, d1):
-        arr[i+OFF][j+OFF] = 1
+        arr[i + OFF][j + OFF] = 1
 
-# 2번: 지우기
+# 2번: 덮기(지우기)
 for i in range(a2, c2):
     for j in range(b2, d2):
-        arr[i+OFF][j+OFF] = 0
-
-sero=abs(b1-d1)
+        arr[i + OFF][j + OFF] = 0
 
 
+# ✅ 정답 출력: 남은 1들을 덮는 최소 직사각형(바운딩 박스) 넓이
+found = False
+min_x = min_y = 10**9
+max_x = max_y = -10**9
 
-for i in range(a1,c1):
-    cnt=0
-    for j in range(b1,d1): # 열 계산
-        if arr[i+OFF][j+OFF] ==1:
-            cnt+=1
+for i in range(N):
+    for j in range(N):
+        if arr[i][j] == 1:
+            found = True
+            if i < min_x: min_x = i
+            if i > max_x: max_x = i
+            if j < min_y: min_y = j
+            if j > max_y: max_y = j
 
-    if cnt !=sero and cnt>=1: # 열 카운팅으로 계산해서 직사각형 만들기
-        for j in range(b1,d1):
-            arr[i+OFF][j+OFF]=1
-
-sum=0
-
-for i in range(len(arr)):
-    for j in range(len(arr[0])):
-        sum+=arr[i][j]
-
-
-print(sum)
+if not found:
+    print(0)
+else:
+    print((max_x - min_x + 1) * (max_y - min_y + 1))
