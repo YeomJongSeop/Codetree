@@ -17,22 +17,25 @@ for i in range(a2, c2):
     for j in range(b2, d2):
         arr[i + OFF][j + OFF] = 0
 
+# 생각할때 좌표마다 1을 넣어주는것 (0,0) (6,0)이라면 
+# 길이는 6이지만 좌표 이중 배열 넣어줄떄 [i][j]를 0~5 씩 넣어진다
+# 이거때문에 인덱스를 기준으로 +1을 맨 마지막에 해줌 칸을 채우는것이랑 좌표길이랑 생각 잘하기
 
-# ✅ 정답 출력: 남은 1들을 덮는 최소 직사각형(바운딩 박스) 넓이
-found = False
-min_x = min_y = 10**9
-max_x = max_y = -10**9
+found=False
+min_x =min_y = 10**9
+max_x= max_y= -10**9
 
 for i in range(N):
     for j in range(N):
-        if arr[i][j] == 1:
-            found = True
-            if i < min_x: min_x = i
-            if i > max_x: max_x = i
-            if j < min_y: min_y = j
-            if j > max_y: max_y = j
+        if arr[i][j] ==1:
+            found=True
+            if i<min_x: min_x=i
+            if i>max_x: max_x=i
+            if i<min_y: min_y=j
+            if i>max_y: max_y=j
+
 
 if not found:
     print(0)
-else:
-    print((max_x - min_x + 1) * (max_y - min_y + 1))
+else: # 중요 좌표로 변환해서 구하는 것이니까
+    print((max_x - min_x+1 ) * (max_y - min_y+1))
