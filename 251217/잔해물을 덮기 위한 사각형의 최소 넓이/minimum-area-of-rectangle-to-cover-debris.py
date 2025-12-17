@@ -38,4 +38,4 @@ for i in range(N):
 if not found:
     print(0)
 else: # 중요 좌표로 변환해서 구하는 것이니까
-    print((max_x - min_x+1 ) * (max_y - min_y+1))
+    print((max_x - min_x + 1) * (max_y - min_y + 1 ))
