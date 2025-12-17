@@ -31,8 +31,8 @@ for i in range(N):
             found=True
             if i<min_x: min_x=i
             if i>max_x: max_x=i
-            if i<min_y: min_y=j
-            if i>max_y: max_y=j
+            if j<min_y: min_y=j
+            if j>max_y: max_y=j
 
 
 if not found:
